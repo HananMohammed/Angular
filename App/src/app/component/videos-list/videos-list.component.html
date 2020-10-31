@@ -1,0 +1,30 @@
+<!-- <div *ngFor = 'let post of posts'>
+<h3 [textContent] = "title">{{  post.title  }}</h3>
+<h3>{{ post.body }}</h3>
+<input type="text" [value] = "inputValue"> -->
+ <!-- string interpolation -->
+<!-- <img src="{{ imgUrl }}" width=200 height="200"> -->
+ <!-- propety binding -->
+<!-- <img [src] = "imgUrl" width=200 height="200" >
+
+</div> -->
+<!-- <ul class="list-group">
+    <li class="list-group-item"
+        *ngFor="let post of posts; let first = first;"
+        [class.active]="elementActive && first"
+        >{{ post.title }}</li>
+</ul> -->
+<ul class="list-group">
+    <li class="list-group-item"
+        *ngFor="let post of posts;"
+        [class.active]="currentId == post.id"
+        [style.backgroundColor] = "(currentId === post.id) ? 'red' : 'gray'"
+        >{{ post.title }}</li>
+</ul>
+
+<!-- <ul class="list-group">
+    <li class="list-group-item"
+        *ngFor="let post of posts;"
+        [ngClass]="{'active':currentId===post.id}"
+        >{{ post.title }}</li>
+</ul> -->
