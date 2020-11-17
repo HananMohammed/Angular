@@ -13,6 +13,15 @@ export class AppComponent {
     firstName : " " ,
     lastName : " "
   }
+  inputName="my Name";
+  item = {
+    title:"new TV",
+    price:123456.44,
+    sold:234,
+    rating:4.7655,
+    date: new Date(),
+
+  }
   handleClick(event){
     event.stopPropagation();
     console.log("button was Clicked");
@@ -31,8 +40,11 @@ export class AppComponent {
     //   console.log('Enter Was Pressed')
     // }
   }
-  handeleInput(){
-    console.log(this.userData.firstName);
+  // handeleInput(){
+  //   console.log(this.userData.firstName);
+  // }
+  handeleInput() {
+    console.log(this.inputName);
   }
   handeleInput2(value) {
     console.log(value);

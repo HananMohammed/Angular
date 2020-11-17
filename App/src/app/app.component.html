@@ -4,7 +4,7 @@
 <button (click)="handleClick($event)" class="btn btn-primary">Submit</button>
 </div>
 <input type="text" (keyup.enter)="keyUpInput($event)">
-<input type="text" (keyup.enter)="handeleInput($event)">
+<!-- <input type="text" (keyup.enter)="handeleInput($event)"> -->
 <!-- template variable -->
 <input type="text" 
     #firstName
@@ -19,11 +19,54 @@
 >
 {{ name }}
 -->
-<input 
+<!-- <input 
     type="text" 
     class="form-control" 
     [(ngModel)]="userData.firstName" 
     (keyup.enter)="handeleInput()">
  <br>
-{{ userData.firstName }}
-<br><br><br><br><br><br><br>  
+{{ userData.firstName }} -->
+<!-- <input
+    type="text" 
+    class="form-control"
+    #inputName
+      (keyup.enter)="handeleInput(inputName.value)">
+<br> -->
+<!--One Way Data binding From component to Html-->
+<input 
+    type="text" 
+    class="form-control" 
+    [value]="inputName"
+    (keyup.enter)="handeleInput()">
+<br><br><br><br><br><br><br><br>  
+
+<!-- Pipes -->
+<h3>Pipes is a building Blocks to chane Data Format </h3>
+
+<div>{{ item.title | uppercase}}</div>
+<div>{{ item.price | currency:'EGP':true :'4.1-1'}}</div>
+<div>{{ item.sold | number:'2.0-2'}}</div>
+<div>{{ item.rating | number:'2.0-2' }}</div>
+<div>{{ item.date | date:"dd/mm/yyyy" }}</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
