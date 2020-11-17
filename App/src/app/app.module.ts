@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import{ FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
-import { VideosListComponent } from './component/videos-list/videos-list.component';
+ import { VideosListComponent } from './component/videos-list/videos-list.component';
 import { MusicListComponent } from './component/music-list/music-list.component';
 import { StudentService} from './services/students.services';
 import { PostsService } from './services/posts.service';
@@ -18,7 +18,8 @@ import { from } from 'rxjs';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     StudentService,

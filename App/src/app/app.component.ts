@@ -8,8 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'App';
   currentId:number ;
+  name="Your Name" ;
+  userData = {
+    firstName : " " ,
+    lastName : " "
+  }
   handleClick(event){
     event.stopPropagation();
+    console.log("button was Clicked");
+    console.log("button was Clicked");
     console.log("button was Clicked");
     console.log(event);
 
@@ -24,5 +31,10 @@ export class AppComponent {
     //   console.log('Enter Was Pressed')
     // }
   }
-
+  handeleInput(){
+    console.log(this.userData.firstName);
+  }
+  handeleInput2(value) {
+    console.log(value);
+  }
 }

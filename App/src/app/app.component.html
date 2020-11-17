@@ -4,4 +4,26 @@
 <button (click)="handleClick($event)" class="btn btn-primary">Submit</button>
 </div>
 <input type="text" (keyup.enter)="keyUpInput($event)">
+<input type="text" (keyup.enter)="handeleInput($event)">
+<!-- template variable -->
+<input type="text" 
+    #firstName
+(keyup.enter)="handeleInput2(firstName.value)">
 
+<!-- Two  way data binding -->
+<!-- <input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="name"
+    (keyup.enter)="handeleInput()"
+>
+{{ name }}
+-->
+<input 
+    type="text" 
+    class="form-control" 
+    [(ngModel)]="userData.firstName" 
+    (keyup.enter)="handeleInput()">
+ <br>
+{{ userData.firstName }}
+<br><br><br><br><br><br><br>  
