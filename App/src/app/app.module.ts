@@ -9,12 +9,14 @@ import { StudentService} from './services/students.services';
 import { PostsService } from './services/posts.service';
 import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
+import { summaryPipe} from './pipes/summary.pipes' ;
 
 @NgModule({
   declarations: [
     AppComponent,
     VideosListComponent,
     MusicListComponent,
+    summaryPipe,
   
   ],
   imports: [
