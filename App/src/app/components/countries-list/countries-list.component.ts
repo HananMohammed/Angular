@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'countries-list',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./countries-list.component.css']
 })
 export class CountriesListComponent implements OnInit {
+  @Input("selectedCountry") selectedCountry;
+  @Output()countryUpdated = new EventEmitter();
+  country:string;
 countries = [
   {name:"Egypt" , value:"egypt"},
   {name:"Syria" , value:"syria"},
@@ -17,5 +20,7 @@ countries = [
 
   ngOnInit(): void {
   }
-
+  countryChanged(){
+    this.countryUpdated.emit(this.country);
+  }
 }

@@ -1,4 +1,4 @@
-<countries-list></countries-list>
+<countries-list [selectedCountry]="selectedCountry" (countryUpdated)="countryChanged($event)"></countries-list>
 
 <br><br>
 <videos-list></videos-list>

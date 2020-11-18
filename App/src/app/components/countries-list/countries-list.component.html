@@ -1,7 +1,7 @@
-<select>
+<select [(ngModel)]="country" (change)="countryChanged()">
     <option disabled selected value=""> Select Country</option>
     <option 
     *ngFor="let country of countries"
-    [value]="country.value"
+    [selected] = "country.value == selectedCountry"
      >{{ country.name }}</option>
 </select>

@@ -34,6 +34,8 @@ export class AppComponent {
     which is why at a glance it looks pretty real
     `;
 
+  selectedCountry = "syria" ;
+
   handleClick(event){
     event.stopPropagation();
     console.log("button was Clicked");
@@ -58,7 +60,11 @@ export class AppComponent {
   handeleInput() {
     console.log(this.inputName);
   }
+ 
   handeleInput2(value) {
     console.log(value);
+  }
+  countryChanged(country) {
+    console.log("Country Changed To :" +country)
   }
 }
