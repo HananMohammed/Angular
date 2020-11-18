@@ -10,7 +10,8 @@ import { PostsService } from './services/posts.service';
 import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
 import { summaryPipe} from './pipes/summary.pipes';
-import { CountriesListComponent } from './components/countries-list/countries-list.component' ;
+import { CountriesListComponent } from './components/countries-list/countries-list.component';
+import { BootstrapJumbtronComponentComponent } from './components/bootstrap-jumbtron-component/bootstrap-jumbtron-component.component' ;
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CountriesListComponent } from './components/countries-list/countries-li
     MusicListComponent,
     summaryPipe,
     CountriesListComponent,
+    BootstrapJumbtronComponentComponent,
   
   ],
   imports: [

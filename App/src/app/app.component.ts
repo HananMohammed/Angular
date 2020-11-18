@@ -22,6 +22,7 @@ export class AppComponent {
     date: new Date(),
 
   }
+  
   postDescription =
   ` 
     Until recently, the prevailing 
