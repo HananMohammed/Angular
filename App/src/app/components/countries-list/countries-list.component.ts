@@ -1,9 +1,17 @@
-import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'countries-list',
-  templateUrl: './countries-list.component.html',
-  styleUrls: ['./countries-list.component.css']
+   templateUrl: './countries-list.component.html',
+  // template :`
+
+  //       <div> Hello Form Other Side </div>
+  //       <div>{{ currentCountry }}</div>
+
+  // `,
+  styleUrls: ['./countries-list.component.css'] ,
+  encapsulation: ViewEncapsulation.ShadowDom
+
 })
 export class CountriesListComponent implements OnInit {
   @Input("selectedCountry") selectedCountry;
