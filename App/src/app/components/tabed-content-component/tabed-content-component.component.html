@@ -1,0 +1,27 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item active">
+        <a class="nav-link"
+         [class.active]="activeLink=='link1'"
+         (click)="activeLink = 'link1'"
+          href="#">Link 1</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" 
+        [class.active]="activeLink=='link2'"
+        (click)="activeLink = 'link2'"
+         href="#">Link 2</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" 
+        [class.active]="activeLink=='link3'"
+        (click)="activeLink = 'link3'"
+          href="#">Link 3</a>
+    </li>
+</ul>
+<br>
+<div [ngSwitch]="activeLink" >
+    <div *ngSwitchCase="'link1'"> Link Content 1</div>
+    <div  *ngSwitchCase="'link2'"> Link Content 2</div>
+    <div  *ngSwitchCase="'link3'" >  Link Content 3</div>
+    <div  *ngSwitchDefault>  Default Content</div>
+</div>

@@ -17,6 +17,12 @@ posts:any[];
   // constructor(studentService: StudentService) {
   //   this.students = studentService.getStudents();
   //  }
+  videos =[
+
+    { title: "First Video " , id:1 } ,
+    { title: "Second Video " , id:2 } ,
+  
+  ]
 
   constructor(postService: PostsService ){
     postService.getPosts().subscribe(

@@ -11,7 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
 import { summaryPipe} from './pipes/summary.pipes';
 import { CountriesListComponent } from './components/countries-list/countries-list.component';
-import { BootstrapJumbtronComponentComponent } from './components/bootstrap-jumbtron-component/bootstrap-jumbtron-component.component' ;
+import { BootstrapJumbtronComponentComponent } from './components/bootstrap-jumbtron-component/bootstrap-jumbtron-component.component';
+import { TabedContentComponentComponent } from './components/tabed-content-component/tabed-content-component.component' ;
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BootstrapJumbtronComponentComponent } from './components/bootstrap-jumb
     summaryPipe,
     CountriesListComponent,
     BootstrapJumbtronComponentComponent,
+    TabedContentComponentComponent,
   
   ],
   imports: [
