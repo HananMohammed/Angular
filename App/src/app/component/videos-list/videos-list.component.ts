@@ -17,12 +17,7 @@ posts:any[];
   // constructor(studentService: StudentService) {
   //   this.students = studentService.getStudents();
   //  }
-  videos =[
-
-    { title: "First Video " , id:1 } ,
-    { title: "Second Video " , id:2 } ,
-  
-  ]
+  videos =[];
 
   constructor(postService: PostsService ){
     postService.getPosts().subscribe(
@@ -40,4 +35,21 @@ posts:any[];
 activateCurrentPost(id){
   this.currentId = id ;
 }
+  removeVideo(index){
+    console.log(index)
+    this.videos.splice(index, 1) ;
+  }
+  addVideo() {
+    this.videos.push({ title: "Fifth Video ", id: 5 });
+  }
+  showVideos(){
+    this.videos = [
+
+      { title: "First Video ", id: 1 },
+      { title: "Second Video ", id: 2 },
+      { title: "Third Video ", id: 3 },
+      { title: "Fourth Video ", id: 4 },
+
+    ]
+  }
 }

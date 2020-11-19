@@ -1,0 +1,14 @@
+.videos-list{
+    margin: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.videos-list-item{
+    padding: 20px 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+.videos-list-item-even{
+    background-color: #583d3d;
+}

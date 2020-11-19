@@ -27,7 +27,7 @@
         [ngClass]="{'active':currentId===post.id}"
         >{{ post.title }}</li>
 </ul> -->
-<ng-container *ngIf="videos.length ; then videos else noVideos"></ng-container>
+<!-- <ng-container *ngIf="videos.length ; then videos else noVideos"></ng-container>
 
 <ng-template #videos>
     <ul>
@@ -35,4 +35,18 @@
     </ul>
 </ng-template>
 
-<div #noVideos> You don't have video</div>
+<div #noVideos> You don't have video</div> -->
+
+<button btn btn-primary (click)="addVideo()"> Add Video</button>
+<button btn btn-primary (click)="showVideos()"> Show Videos</button>
+<ul class="videos-list" [hidden]="!videos.length">
+    <li 
+    class="video-list-item"
+    [class.videos-list-item-even]="even"
+    *ngFor="let video of videos let even = even; let i = index " >
+     {{ video.title }}
+    <button btn btn-primary (click)="removeVideo(i)"> Delete</button>
+    </li>
+
+</ul>
+<div [hidden]="videos.length"> You don't have video</div>
