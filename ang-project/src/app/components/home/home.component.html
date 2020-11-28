@@ -1,12 +1,12 @@
 <div class="row">
-<div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let news of allEgyptNews">
+<div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let news of allEgyptNews ;let i=index;">
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" [src]="news.urlToImage" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title text-success">{{ news.title }}</h5>
             <p>Published At :{{ news.publishedAt }}</p>
-            <p class="card-text">{{ news.description }}</p>
-            <a href="#" class="btn btn-primary">More Details</a>
+            <p class="card-text hp-scene-text-center text-muted text-truncate">{{ news.description }}</p>
+            <a [routerLink]="['/details',i]" class="btn btn-primary">More Details</a>
         </div>
     </div>
 </div>

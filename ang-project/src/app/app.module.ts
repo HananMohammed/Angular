@@ -8,10 +8,12 @@ import { AboutComponent } from './components/about/about.component';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { HttpClientModule } from '@angular/common/http';
+import { DetailsComponent } from './components/details/details.component';
 
 const routeLinks = [
   { path: 'egypt-news', component: HomeComponent },
   { path: 'SA-news', component: AboutComponent },
+  { path: 'details/:id', component: DetailsComponent },
   { path: 'binding', component: BindingComponent },
 ] ;
 
@@ -22,6 +24,7 @@ const routeLinks = [
     HomeComponent,
     AboutComponent,
     NavbarComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
