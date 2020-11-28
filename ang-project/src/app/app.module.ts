@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './components/details/details.component';
+import { CutPipe } from './cut.pipe';
 
 const routeLinks = [
   { path: 'egypt-news', component: HomeComponent },
@@ -25,6 +26,7 @@ const routeLinks = [
     AboutComponent,
     NavbarComponent,
     DetailsComponent,
+    CutPipe,
   ],
   imports: [
     BrowserModule,
