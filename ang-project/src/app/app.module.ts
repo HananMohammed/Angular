@@ -10,8 +10,8 @@ import { NavbarComponent } from './components/navbar/navbar.component'
 import { HttpClientModule } from '@angular/common/http';
 
 const routeLinks = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'egypt-news', component: HomeComponent },
+  { path: 'SA-news', component: AboutComponent },
   { path: 'binding', component: BindingComponent },
 ] ;
 
@@ -21,7 +21,7 @@ const routeLinks = [
     BindingComponent,
     HomeComponent,
     AboutComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

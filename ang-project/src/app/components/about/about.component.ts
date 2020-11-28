@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SaNewsService } from '../.././services/sa-news.service';
 
 @Component({
   selector: 'about',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  public allSaNews = [];
+
+  constructor(public _SaNewsService:SaNewsService) {
+    this._SaNewsService.saNews().subscribe((news)=>{
+      
+      this.allSaNews = news.articles;
+      console.log(this.allSaNews);
+
+    })
+   }
 
   ngOnInit(): void {
   }

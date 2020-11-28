@@ -6,12 +6,19 @@ import { NewsService } from '../../news.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
 
-  allEgyptNews =[];
+  public allEgyptNews =[];
+  //news ;
 
-  constructor(public _NewsService: NewsService) { 
-   this.allEgyptNews =  this._NewsService.getNews();
+  constructor(public _NewsService: NewsService) {
+
+    this._NewsService.getNews().subscribe((news) => {
+      this.allEgyptNews = news.articles;     
+    })
+    
+  // this.allEgyptNews =  this._NewsService.getNews();
   }
 
   ngOnInit(): void {
