@@ -10,6 +10,9 @@ import { NavbarComponent } from './components/navbar/navbar.component'
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './components/details/details.component';
 import { CutPipe } from './cut.pipe';
+import { ContactusComponent } from './components/contactus/contactus.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routeLinks = [
   { path: 'egypt-news', component: HomeComponent },
@@ -27,12 +30,15 @@ const routeLinks = [
     NavbarComponent,
     DetailsComponent,
     CutPipe,
+    ContactusComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routeLinks),
+    AppRoutingModule,
+    ReactiveFormsModule
   
   ],
   providers: [],
