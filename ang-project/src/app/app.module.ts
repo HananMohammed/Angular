@@ -13,6 +13,7 @@ import { CutPipe } from './cut.pipe';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CarComponent } from './user/car/car.component';
 
 const routeLinks = [
   { path: 'egypt-news', component: HomeComponent },
@@ -31,6 +32,7 @@ const routeLinks = [
     DetailsComponent,
     CutPipe,
     ContactusComponent,
+    CarComponent,
   ],
   imports: [
     BrowserModule,
